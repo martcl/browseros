@@ -17,9 +17,9 @@
 	let windowWidth = 500;
 	let windowHeight = 500;
 
-    // x, y cords of top left corner
-    let windowPosX = (Math.random() * 600) ;
-	let windowPosY = (Math.random() * 300) ;
+	// x, y cords of top left corner
+	let windowPosX = Math.random() * 400;
+	let windowPosY = Math.random() * 200;
 
 	// values to check if user is interacting with window
 	let isActiveDragWindow = false;
@@ -85,7 +85,6 @@
 		}
 	});
 
-
 	const [send, receive] = crossfade({
 		duration: (d) => Math.sqrt(d * 200),
 
@@ -103,39 +102,39 @@
 			};
 		}
 	});
-
 </script>
 
 <svelte:window bind:innerWidth={clientWindowWidth} />
+
 {#key $processes.find((process) => process.id == processId)?.isOpen}
-	<div
-		in:receive="{{key: processId}}"
-		out:send="{{key: processId}}"
-		on:mousedown={() => {
-			processes.onFocus(processId);
-		}}
-		name="window"
-		class="window"
-		style="--window-pos-x: {windowPosX}px; --window-pos-y: {windowPosY}px; --window-width: {windowWidth}px;  --window-height: {windowHeight}px; --z-index: {isFocus
-			? 100
-			: 1}; display:{$processes.find((process) => process.id == processId)?.isOpen
-			? 'inherit'
-			: 'none'}"
-	>
-		<div class="window-header" on:mousedown={handleMouseDownDrag}>
-			<h2>{title}{processId}</h2>
-			<div class="window-buttons">
-				<OldBtn on:click={handleWindowMinimize} lable="_" />
-				<OldBtn on:click={handleWindowExit} lable="x" />
+	{#if $processes.find((process) => process.id == processId)?.isOpen}
+		<div
+			in:receive={{ key: processId }}
+			out:send={{ key: processId }}
+			on:mousedown={() => {
+				processes.onFocus(processId);
+			}}
+			name="window"
+			class="window"
+			style="--window-pos-x: {windowPosX}px; --window-pos-y: {windowPosY}px; --window-width: {windowWidth}px;  --window-height: {windowHeight}px; --z-index: {isFocus
+				? 100
+				: 1};"
+		>
+			<div class="window-header" on:mousedown={handleMouseDownDrag}>
+				<h2>{title}</h2>
+				<div class="window-buttons">
+					<OldBtn on:click={handleWindowMinimize} lable="_" />
+					<OldBtn on:click={handleWindowExit} lable="x" />
+				</div>
+			</div>
+			<div class="window-body">
+				<slot />
+			</div>
+			<div class="window-footer">
+				<span class="expand" on:mousedown={handleMouseDownSize} />
 			</div>
 		</div>
-		<div class="window-body">
-			<slot />
-		</div>
-		<div class="window-footer">
-			<span class="expand" on:mousedown={handleMouseDownSize} />
-		</div>
-	</div>
+	{/if}
 {/key}
 
 <style>

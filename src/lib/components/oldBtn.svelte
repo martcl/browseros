@@ -1,15 +1,17 @@
 <script lang="ts">
-    export let lable: string = "lable";
-    export let type: string = "button";
-    export let style: string = ""
+	export let lable: string = 'lable';
+	export let type: string = 'button';
+	export let style: string = '';
 </script>
 
-<div class="winCl-wrap"><button type="{type}" on:click class="winCl-btn" style="{style}">{lable}</button></div>
- 
+<div class="winCl-wrap"><button {type} on:click class="winCl-btn" {style}>{lable}</button></div>
+
 <style>
 	.winCl-wrap {
 		border: 1px solid #000;
-		display: block;
+		display: flex;
+		height: fit-content;
+		flex-shrink: 1;
 		margin-right: 10px;
 		padding-top: 1px;
 		padding-bottom: 3px;
@@ -23,7 +25,6 @@
 		border-bottom: 1px solid #848484;
 		background-color: transparent;
 		padding: 3px 15px 3px 15px;
-     
 	}
 
 	.winCl-btn:hover,

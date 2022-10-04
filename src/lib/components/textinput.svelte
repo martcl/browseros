@@ -1,14 +1,14 @@
 <script lang="ts">
-    export let text: string
-    export let name: string
+	export let text: string;
+	export let name: string;
 </script>
 
-<input class="winCl-inp" type="text" name="{name}" bind:value={text}>
+<input class="winCl-inp" type="text" {name} bind:value={text} />
 
 <style>
-    .winCl-inp {
-        max-width: 100%;
-        border-right: 1px solid #fff;
+	.winCl-inp {
+		max-width: 100%;
+		border-right: 1px solid #fff;
 		border-bottom: 1px solid #fff;
 		border-left: 1px solid #848484;
 		border-top: 1px solid #848484;
@@ -19,5 +19,4 @@
 	.winCl-inp:focus {
 		outline: 0;
 	}
-
 </style>
