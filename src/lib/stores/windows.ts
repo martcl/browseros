@@ -1,4 +1,4 @@
-import welcomeWindow from '$lib/components/welcomeWindow.svelte';
+import welcomeWindow from '$lib/components/apps/welcome/welcomeWindow.svelte';
 import { writable } from 'svelte/store';
 
 export type process = {

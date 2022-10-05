@@ -1,19 +1,17 @@
 <script lang="ts">
-	import MailWindow from './mailWindow.svelte';
+	import MailWindow from '../apps/mail/mailWindow.svelte';
 	import { processes } from '$lib/stores/windows';
-	import OldBtn from './oldBtn.svelte';
-	import SettingClock from './settingClock.svelte';
+	import OldBtn from '../inputs/oldBtn.svelte';
+	import SettingClock from '../misc/settingClock.svelte';
+	import App from '../inputs/appBtn.svelte';
+	import MailAppBtn from '../apps/mail/mailAppBtn.svelte';
+	import SettingsAppBtn from '../apps/settings/settingsAppBtn.svelte';
 
-	$: openMailApp = () => {
-		processes.addNewProcess({
-			title: 'TIHLDE Mail App',
-			component: MailWindow.bind(Math.random())
-		});
-	};
 
 	$: handleMinimizeWindow = (id: number) => {
 		processes.onMinimize(id);
 	};
+
 </script>
 
 <div class="taskbar">
@@ -22,11 +20,9 @@
 			<img src="/TIHLDE_LOGO.png" alt="TIHLDE logo" />
 		</div>
 		<hr />
-		<OldBtn
-			lable=""
-			style="background-size: 70%; padding: 20px; background-image: url('/mails.png'); background-position: center; background-repeat: no-repeat; height: 40px; width: 40px;"
-			on:click={openMailApp}
-		/>
+		<MailAppBtn />
+		<SettingsAppBtn />
+		<App />
 		<hr />
 		<div class="tasks">
 			{#each $processes as process}

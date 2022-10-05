@@ -1,8 +1,8 @@
 <script lang="ts">
-	import OldBtn from './oldBtn.svelte';
-	import Textarea from './textarea.svelte';
-	import Textinput from './textinput.svelte';
-	import Window from './window.svelte';
+	import OldBtn from '../../inputs/oldBtn.svelte';
+	import Textarea from '../../inputs/textarea.svelte';
+	import Textinput from '../../inputs/textinput.svelte';
+	import Window from '../../misc/window.svelte';
 
 	export let title: string;
 	export let processId: number;

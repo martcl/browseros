@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { mouse } from '$lib/stores/mouse';
 	import { processes } from '$lib/stores/windows';
-	import OldBtn from './oldBtn.svelte';
+	import OldBtn from '../inputs/oldBtn.svelte';
 	// animations
 	import { quintOut } from 'svelte/easing';
 	import { crossfade } from 'svelte/transition';
@@ -116,6 +116,7 @@
 			}}
 			name="window"
 			class="window"
+			class:elivation={isFocus}
 			style="--window-pos-x: {windowPosX}px; --window-pos-y: {windowPosY}px; --window-width: {windowWidth}px;  --window-height: {windowHeight}px; --z-index: {isFocus
 				? 100
 				: 1};"
@@ -154,7 +155,9 @@
 		min-width: 350px;
 		min-height: 300px;
 	}
-
+	.elivation {
+		box-shadow: 0px 24px 48px 0 rgba(0,0,0,0.16);
+	}
 	.window-header {
 		background-color: rgb(72, 89, 199);
 		display: flex;

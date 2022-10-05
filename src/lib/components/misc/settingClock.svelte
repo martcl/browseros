@@ -1,5 +1,5 @@
 <script lang="ts">
-	import OldBtn from "./oldBtn.svelte";
+	import OldBtn from "../inputs/oldBtn.svelte";
 
     let clockString: string = ""
     let dateString: string = ""
