@@ -14,8 +14,8 @@
 	// ----- variables for window
 
 	// initial window dimentions
-	let windowWidth = 500;
-	let windowHeight = 500;
+	export let windowWidth = 500;
+	export let windowHeight = 500;
 
 	// x, y cords of top left corner
 	let windowPosX = Math.random() * 400;

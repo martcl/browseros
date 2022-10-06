@@ -6,6 +6,7 @@
 	import App from '../inputs/appBtn.svelte';
 	import MailAppBtn from '../apps/mail/mailAppBtn.svelte';
 	import SettingsAppBtn from '../apps/settings/settingsAppBtn.svelte';
+	import InternetAppBtn from '../apps/internet/internetAppBtn.svelte';
 
 
 	$: handleMinimizeWindow = (id: number) => {
@@ -22,7 +23,8 @@
 		<hr />
 		<MailAppBtn />
 		<SettingsAppBtn />
-		<App />
+
+		<InternetAppBtn />
 		<hr />
 		<div class="tasks">
 			{#each $processes as process}
