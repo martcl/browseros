@@ -1,18 +1,9 @@
-# create-svelte
+# Browser OS
+> A web basted *operating system*. For fun and games :)
+[Try it out here!](browseros-martinclementz.vercel.app/)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+![image](https://user-images.githubusercontent.com/26656069/194413938-414a4917-a778-4a37-b5b4-c4aeb5ccd66c.png)
 
 ## Developing
 
