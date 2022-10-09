@@ -8,11 +8,9 @@
 	import SettingsAppBtn from '../apps/settings/settingsAppBtn.svelte';
 	import InternetAppBtn from '../apps/internet/internetAppBtn.svelte';
 
-
 	$: handleMinimizeWindow = (id: number) => {
 		processes.onMinimize(id);
 	};
-
 </script>
 
 <div class="taskbar">

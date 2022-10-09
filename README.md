@@ -1,7 +1,7 @@
 # Browser OS
-> A web basted *operating system*. For fun and games :)
-[Try it out here!](browseros-martinclementz.vercel.app/)
 
+> A web basted _operating system_. For fun and games :)
+> [Try it out here!](browseros-martinclementz.vercel.app/)
 
 ![image](https://user-images.githubusercontent.com/26656069/194413938-414a4917-a778-4a37-b5b4-c4aeb5ccd66c.png)
 

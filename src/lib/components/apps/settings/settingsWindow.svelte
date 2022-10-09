@@ -11,16 +11,16 @@
 
 	let newBackground: string = '';
 
-    $: handleSaveAndReload = () => {
-        storeData('background', newBackground);
-        location.reload()
-    }
+	$: handleSaveAndReload = () => {
+		storeData('background', newBackground);
+		location.reload();
+	};
 </script>
 
 <Window {title} {processId} {isFocus}>
 	<h2>Endre bakgrunn</h2>
 	<p>Ny bakgrunn (URL)</p>
-	<input bind:value={newBackground} type="text"  />
+	<input bind:value={newBackground} type="text" />
 
 	<p>Lagre endringer, og restart OS</p>
 	<div style="display: flex; align-items:flex-start">

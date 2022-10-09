@@ -7,7 +7,7 @@
 	$: handleMouseEvent = (e: MouseEvent) =>
 		mouse.set({ x: e.clientX, y: e.clientY, mouseDown: e.buttons === 1 });
 
-	let backgroundImage = retriveData("background") || "https://wallpaperaccess.com/full/52448.jpg"
+	let backgroundImage = retriveData('background') || 'https://wallpaperaccess.com/full/52448.jpg';
 </script>
 
 <svelte:body on:mousemove={handleMouseEvent} />

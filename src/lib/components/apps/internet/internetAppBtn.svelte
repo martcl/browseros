@@ -4,10 +4,10 @@
 	import InternetWindow from './internetWindow.svelte';
 
 	$: handleMailAppClick = () => {
-			processes.addNewProcess({
-				title: 'THE WEEEB',
-				component: InternetWindow
-            })
+		processes.addNewProcess({
+			title: 'THE WEEEB',
+			component: InternetWindow
+		});
 	};
 </script>
 

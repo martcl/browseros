@@ -4,16 +4,18 @@
 	import SettingsWindow from './settingsWindow.svelte';
 
 	$: handleSettingsAppClick = () => {
-        let renderedSettingsAppIndex = $processes.findIndex((process) => process.title === 'Instillinger' && process.isRendered)
+		let renderedSettingsAppIndex = $processes.findIndex(
+			(process) => process.title === 'Instillinger' && process.isRendered
+		);
 		if (renderedSettingsAppIndex === -1) {
 			processes.addNewProcess({
 				title: 'Instillinger',
 				component: SettingsWindow
 			});
-            return
+			return;
 		}
-        processes.onFocus($processes[renderedSettingsAppIndex].id)
-        processes.onMinimize($processes[renderedSettingsAppIndex].id)
+		processes.onFocus($processes[renderedSettingsAppIndex].id);
+		processes.onMinimize($processes[renderedSettingsAppIndex].id);
 	};
 </script>
 

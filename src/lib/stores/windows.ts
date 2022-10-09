@@ -11,7 +11,16 @@ export type process = {
 };
 
 function createProcesses() {
-	const { subscribe, update } = writable<process[]>([{id: 0, isFocus: true, isOpen: true, isRendered: true, title: "TIHLDE OS", component: welcomeWindow}]);
+	const { subscribe, update } = writable<process[]>([
+		{
+			id: 0,
+			isFocus: true,
+			isOpen: true,
+			isRendered: true,
+			title: 'TIHLDE OS',
+			component: welcomeWindow
+		}
+	]);
 
 	return {
 		subscribe,
@@ -41,10 +50,11 @@ function createProcesses() {
 		removeProcessWithId: (id: number) =>
 			update((prevProcesses) =>
 				prevProcesses.map((process) => {
-					if (process.id === id) return { ...process, isFocus: false, isRendered: false, isOpen: false };
+					if (process.id === id)
+						return { ...process, isFocus: false, isRendered: false, isOpen: false };
 					return process;
 				})
-			),
+			)
 	};
 }
 

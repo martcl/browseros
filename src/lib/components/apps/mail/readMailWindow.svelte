@@ -1,9 +1,12 @@
 <script lang="ts">
 	import Window from '../../misc/window.svelte';
+	export let title: string;
+	export let processId: number;
+	export let isFocus: boolean;
 </script>
 
-<Window title="Du har fått mail!">
-	<h2>Maildawd</h2>
+<Window {title} {processId} {isFocus}>
+	<h2>MELDIGN FRA ...</h2>
 	<p>fra: noreply@tihlde.org</p>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

@@ -156,7 +156,7 @@
 		min-height: 300px;
 	}
 	.elivation {
-		box-shadow: 0px 24px 48px 0 rgba(0,0,0,0.16);
+		box-shadow: 0px 24px 48px 0 rgba(0, 0, 0, 0.16);
 	}
 	.window-header {
 		background-color: rgb(72, 89, 199);

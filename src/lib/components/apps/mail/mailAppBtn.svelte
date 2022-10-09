@@ -4,16 +4,18 @@
 	import MailWindow from './mailWindow.svelte';
 
 	$: handleMailAppClick = () => {
-        let renderedMailAppIndex = $processes.findIndex((process) => process.title === 'TIHLDE Mail App' && process.isRendered)
+		let renderedMailAppIndex = $processes.findIndex(
+			(process) => process.title === 'TIHLDE Mail App' && process.isRendered
+		);
 		if (renderedMailAppIndex === -1) {
 			processes.addNewProcess({
 				title: 'TIHLDE Mail App',
 				component: MailWindow
 			});
-            return
+			return;
 		}
-        processes.onFocus($processes[renderedMailAppIndex].id)
-        processes.onMinimize($processes[renderedMailAppIndex].id)
+		processes.onFocus($processes[renderedMailAppIndex].id);
+		processes.onMinimize($processes[renderedMailAppIndex].id);
 	};
 </script>
 

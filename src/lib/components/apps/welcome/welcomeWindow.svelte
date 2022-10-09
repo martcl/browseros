@@ -8,7 +8,7 @@
 
 <Window {title} {processId} {isFocus}>
 	<h1>Velkommen til TIHLDE OS</h1>
-	<img src="/TIHLDE_LOGO.png" alt="">
+	<img src="/TIHLDE_LOGO.png" alt="" />
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 		labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -17,4 +17,3 @@
 		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</p>
 </Window>
-
